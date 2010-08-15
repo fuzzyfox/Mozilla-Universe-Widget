@@ -5,6 +5,14 @@ if (!('console' in window)) {
 }
 
 var mozillaUniverse = function(options){
+	//ensure that some default options exist if not already set
+	if(typeof options == 'undefined')
+	{
+		options = {
+			type : 'link',
+			jqueryNoConflict : true
+		};
+	}
 	if(typeof jQuery == 'undefined')
 	{
 		console.log('jquery does not exist, load it up with the rest of the widgets needed files')
@@ -15,16 +23,19 @@ var mozillaUniverse = function(options){
 	}
 	else
 	{
-		if($().jquery != '1.4.2')
+		if(jQuery('#mozillaUniverseWidget').length == 0)
 		{
-			console.log('removing older version of jquery in favour of new version, then loading needed files');
-			delete $;
-			delete jQuery;
-			mozillaUniverse.getScript('http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js');
+			if($().jquery != '1.4.2')
+			{
+				console.log('removing older version of jquery in favour of new version, then loading needed files');
+				delete $;
+				delete jQuery;
+				mozillaUniverse.getScript('http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js');
+			}
+			mozillaUniverse.getScript('http://labs.mozhunt.com/mozilla-universe-widget/assets/js/jit.min.js');
+			mozillaUniverse.getScript('http://labs.mozhunt.com/mozilla-universe-widget/assets/js/universe.js');
+			options.jqueryNoConflict = false;
 		}
-		mozillaUniverse.getScript('http://labs.mozhunt.com/mozilla-universe-widget/assets/js/jit.min.js');
-		mozillaUniverse.getScript('http://labs.mozhunt.com/mozilla-universe-widget/assets/js/universe.js');
-		options.jqueryNoConflict = false;
 	}
 	mozillaUniverse.tryReady(0, options);
 };
@@ -61,14 +72,6 @@ mozillaUniverse.tryReady = function(timeElapsed, options){
 		{
 			console.log('setting jquery to no conflict mode');
 			jQuery.noConflict();
-		}
-		
-		//ensure that some default options exist if not already set
-		if(typeof options == 'undefined')
-		{
-			options = {
-				type : 'link'
-			};
 		}
 		
 		//check if there is an istance of the map already
