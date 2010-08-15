@@ -17,6 +17,7 @@ Features
 * No need for any major change to a page, just two lines
 of code and your off!
 * can be used in conjunction with any javascript library.
+* location indicator (showing where in the universe you currently are)
 
 **WARNING!** If using this with a site that uses and/or requires
 the use of jQuery below version 1.4.2 it will replace this with
@@ -30,7 +31,6 @@ If you experience problems just remove the widget and all will be
 well again. **Unless you broke something else while using the widget!**
 
 ### Still To Come
-* location indicator (showing where in the universe you currently are)
 * jQuery plugin version
 * a great design (currently a little rough round the edges)
 * more options in customisation
@@ -77,3 +77,4 @@ August 15th, 2010
 * worked out most major bugs that prevented widget
 from working
 * wrote some documentation
+* enabled "you are here"

@@ -1,5 +1,5 @@
-mozillaUniverse.universe = function(){
-
+mozillaUniverse.universe = function(cb){
+	
     // namespaces
     if (typeof org == 'undefined') {
         var org = {};
@@ -397,11 +397,10 @@ mozillaUniverse.universe = function(){
 			jQuery.ajax({
                 url: org.mozilla.SiteMap.dataUrl,
                 jsonpCallback: 'mapData',
-		dataType: 'jsonp',
+				dataType: 'jsonp',
                 success: function(data) {
                     org.mozilla.SiteMap.data =
                         org.mozilla.SiteMap.cleanData(data);
-
                     org.mozilla.SiteMap.$graph.trigger('cm:data:ready');
                 }
             });
@@ -632,5 +631,8 @@ mozillaUniverse.universe = function(){
     };
 
     org.mozilla.SiteMap._init('http://labs.mozhunt.com/mozilla-universe-widget/assets/js/data.json');
-
+	if(typeof cb != 'undefined')
+	{
+		cb();
+	}
 };

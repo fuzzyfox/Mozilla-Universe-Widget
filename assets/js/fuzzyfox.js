@@ -10,7 +10,8 @@ var mozillaUniverse = function(options){
 	{
 		options = {
 			type : 'link',
-			jqueryNoConflict : true
+			jqueryNoConflict : true,
+			youAreHere : 'mozilla'
 		};
 	}
 	if(typeof jQuery == 'undefined')
@@ -143,7 +144,10 @@ mozillaUniverse.tryReady = function(timeElapsed, options){
 			else
 			{
 				console.log('map exists, attempting to load');
-				mozillaUniverse.universe();
+				mozillaUniverse.universe(function(){
+					var baseLocation = location.href.split('#')[0];
+					location.href = baseLocation + '#' + options.youAreHere;
+				});
 			}
 		}
 		mozillaUniverse.tryUniverseReady(0);
