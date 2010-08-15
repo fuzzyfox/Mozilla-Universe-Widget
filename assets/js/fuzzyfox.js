@@ -93,8 +93,8 @@ mozillaUniverse.tryReady = function(timeElapsed, options){
 			jQuery('body').append($mozillaUniverse_container);
 			jQuery('#mozillaUniverseWidget').show();
 		}
-		//tab widget
 		
+		//tab widget
 		if(options.type == 'tab')
 		{
 			jQuery('#mozillaUniverseWidget').append('<div class="mozillaUniverse-toggle"><div class="mozillaUniverse-toggle-tab"></div></div>');
@@ -102,7 +102,7 @@ mozillaUniverse.tryReady = function(timeElapsed, options){
 				jQuery('#mozillaUniverseWidget .mozillaUniverse-map').slideToggle('slow');
 			});
 		}
-		
+		//link widget
 		if(options.type == 'link')
 		{
 			if(jQuery('#mozillaUniverseWidget.tab').length == 0)
@@ -110,6 +110,7 @@ mozillaUniverse.tryReady = function(timeElapsed, options){
 				jQuery('#mozillaUniverseWidget').hide();
 				jQuery('#mozillaUniverseWidget .mozillaUniverse-map').append('<img class="close" src="http://labs.mozhunt.com/mozilla-universe-widget/assets/img/mozillaUniverseWidget-close.png" alt="close">');
 			}
+			//toggle function
 			function toggleWidget()
 			{
 				if(jQuery('#mozillaUniverseWidget.tab').length == 0)
@@ -121,7 +122,6 @@ mozillaUniverse.tryReady = function(timeElapsed, options){
 					jQuery('#mozillaUniverseWidget .mozillaUniverse-map').slideToggle('slow');
 				}
 			}
-			
 			toggleWidget();
 			jQuery('#mozillaUniverseWidget .close').click(function(){
 				toggleWidget();
