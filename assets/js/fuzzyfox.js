@@ -10,10 +10,10 @@ var mozillaUniverse = function(options){
 	{
 		options = {
 			type : 'link',
-			jqueryNoConflict : true,
-			youAreHere : 'mozilla'
+			jqueryNoConflict : true
 		};
 	}
+	//tell system that we have not finished loading
 	if(typeof jQuery == 'undefined')
 	{
 		console.log('jquery does not exist, load it up with the rest of the widgets needed files')
@@ -40,6 +40,8 @@ var mozillaUniverse = function(options){
 	}
 	mozillaUniverse.tryReady(0, options);
 };
+
+mozillaUniverse.finished = false;
 
 mozillaUniverse.getScript = function(filename){
 	console.log('loading file: '+filename);
@@ -69,14 +71,14 @@ mozillaUniverse.tryReady = function(timeElapsed, options){
 	{
 		console.log('jquery loaded and ready');
 		//set jQuery to no coflict mode
-		if(options.jqueryNoConflict)
+		if(options.jqueryNoConflict && (mozillaUniverse.finished == false))
 		{
 			console.log('setting jquery to no conflict mode');
 			jQuery.noConflict();
 		}
 		
 		//check if there is an istance of the map already
-		if(jQuery('#mozillaUniverseWidget').length == 0)
+		if(mozillaUniverse.finished == false)
 		{
 			//load the jit library
 			//jQuery.getScript('http://labs.mozhunt.com/mozilla-universe-widget/assets/js/jit.min.js');
@@ -103,14 +105,14 @@ mozillaUniverse.tryReady = function(timeElapsed, options){
 		
 		if(options.type == 'link')
 		{
-			if(jQuery('#mozillaUniverseWidget.tab').length == 0)
+			if(mozillaUniverse.finished == false)
 			{
 				jQuery('#mozillaUniverseWidget').hide();
 				jQuery('#mozillaUniverseWidget .mozillaUniverse-map').append('<img class="close" src="http://labs.mozhunt.com/mozilla-universe-widget/assets/img/mozillaUniverseWidget-close.png" alt="close">');
 			}
 			function toggleWidget()
 			{
-				if(jQuery('#mozillaUniverseWidget.tab').length == 0)
+				if(mozillaUniverse.finished == false)
 				{
 					jQuery('#mozillaUniverseWidget').slideToggle('slow');
 				}
@@ -141,12 +143,15 @@ mozillaUniverse.tryReady = function(timeElapsed, options){
 					console.log('failed to load the map');
 				}
 			}
-			else
+			else if(mozillaUniverse.finished == false)
 			{
-				console.log('map exists, attempting to load');
+				console.log('map exists, but not loaded. attempting to load');
 				mozillaUniverse.universe(function(){
+					console.log('map loaded. setting youAreHere');
 					var baseLocation = location.href.split('#')[0];
 					location.href = baseLocation + '#' + options.youAreHere;
+					console.log('mozillaUniverse completely loaded. Have a nice day!');
+					mozillaUniverse.finished = true;
 				});
 			}
 		}

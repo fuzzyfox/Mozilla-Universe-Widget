@@ -38,6 +38,7 @@ well again. **Unless you broke something else while using the widget!**
 
 Usage
 -----
+## basic usage
 append the following to the `<head>` of any page you wish
 to use the widget on:
 
@@ -50,6 +51,18 @@ instead of a simple `<body>`.
 
 To enable the widget when a link is clicked just use `onclick="mozillaUniverse()"`
 in any link or button you wish to trigger the widget.
+## options
+there are some extra options available to you to enhance the experience
+you get when using this widget. Below are of all the options you
+can set and what they do. *These have to be passed into `mozillaUniverse(options)`
+as an object like the one below*
+
+	options = {
+		type : 'link',
+		//sets how the widget displays. can be "link" or "tab"
+		youAreHere : ''
+		//this can be any valid node id for the map. e.g. "mozilla-europe", "drumbeat", etc...
+	}
 
 Credits
 -------
