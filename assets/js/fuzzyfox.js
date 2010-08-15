@@ -105,14 +105,14 @@ mozillaUniverse.tryReady = function(timeElapsed, options){
 		
 		if(options.type == 'link')
 		{
-			if(mozillaUniverse.finished == false)
+			if(jQuery('#mozillaUniverseWidget.tab').length == 0)
 			{
 				jQuery('#mozillaUniverseWidget').hide();
 				jQuery('#mozillaUniverseWidget .mozillaUniverse-map').append('<img class="close" src="http://labs.mozhunt.com/mozilla-universe-widget/assets/img/mozillaUniverseWidget-close.png" alt="close">');
 			}
 			function toggleWidget()
 			{
-				if(mozillaUniverse.finished == false)
+				if(jQuery('#mozillaUniverseWidget.tab').length == 0)
 				{
 					jQuery('#mozillaUniverseWidget').slideToggle('slow');
 				}

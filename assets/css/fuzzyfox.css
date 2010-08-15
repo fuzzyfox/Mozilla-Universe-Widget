@@ -1,6 +1,7 @@
 #mozillaUniverseWidget {
 	background : #1e4262;
 	display : none;
+	z-index : 99999;
 }
 #mozillaUniverseWidget.tab {
 	position : absolute;
