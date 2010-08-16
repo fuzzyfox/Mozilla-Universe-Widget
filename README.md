@@ -31,7 +31,7 @@ If you experience problems just remove the widget and all will be
 well again. **Unless you broke something else while using the widget!**
 
 ### Still To Come
-* jQuery plugin version
+* jQuery plugin version (almost there)
 * a great design (currently a little rough round the edges)
 * more options in customisation
 * *give me your ideas!*
@@ -91,3 +91,8 @@ August 15th, 2010
 from working
 * wrote some documentation
 * enabled "you are here"
+
+August 16th, 2010
+-----------------
+* added initial work on jQuery plugin version
+* discovered unknown bug in link trigger that can prevent widget toggle
