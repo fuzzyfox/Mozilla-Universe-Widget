@@ -38,7 +38,41 @@
 						<li>can be used in conjunction with any javascript library.</li>
 						<li>location indicator (showing where in the universe you currently are)</li>
 					</ul>
-					<p><strong>WARNING!</strong> If using this with a site that uses and/or requires
+				</section>
+				<section>
+					<h2>Usage</h2>
+					<p>Want to start using the widget now? Well you can use the latest without the need to make
+					lots of updates to your site.</p>
+					
+					<h3>basic usage</h3>
+					<p>append the following to the <em>&lt;head&gt;</em> of any page you wish
+					to use the widget on:</p>
+					<pre><code>
+&lt;link href="http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/css/fuzzyfox.css" rel="stylesheet" type="text/css"&gt;
+&lt;script src="http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/js/fuzzyfox.js" type="text/javascript"&gt;&lt;/script&gt;
+					</code></pre>
+					<p>To enable the tab widget you can either call the <code>mozilaUniverse({type:'tab'});</code>
+					function in <em>&lt;script&gt;</em> tags <strong>OR</strong> using <em>&lt;body onload="mozillaUniverse({type:'tab'})"&gt;</em>
+					instead of a simple <em>&lt;body&gt;</em>.</p>
+					<p>To enable the widget when a link is clicked just use <code>onclick="mozillaUniverse()"</code>
+					in any link or button you wish to trigger the widget.</p>
+					
+					<h3>options</h3>
+					<p>there are some extra options available to you to enhance the experience
+					you get when using this widget. Below are of all the options you
+					can set and what they do. <em>These have to be passed into <code>mozillaUniverse(options)</code>
+					as an object like the one below</em></p>
+					<pre><code>
+options = {
+	type : 'link',
+	//sets how the widget displays. can be "link" or "tab"
+	youAreHere : ''
+	//this can be any valid node id for the map. e.g. "mozilla-europe", "drumbeat", etc...
+}
+					</code></pre>
+					
+					<h3>WARNING!</h3>
+					<p>If using this with a site that uses and/or requires
 					the use of jQuery below version 1.4.2 it will replace this with
 					jQuery 1.4.2. This is required for this widget to work.</p>
 					
@@ -48,10 +82,6 @@
 					
 					<p>If you experience problems just remove the widget and all will be
 					well again. <strong>Unless you broke something else while using the widget!</strong></p>
-				</section>
-				<section>
-					<h2>Usage</h2>
-					<p>this section to come</p>
 				</section>
 				<section>
 					<h2>Credits</h2>
