@@ -139,7 +139,17 @@ mapData({
                             ] 
                         } 
                     ] 
-                } 
+                },
+				{
+					"name": "Mozilla Universe Widget",
+					"id": "mozilla-universe-widget",
+					"data": {
+						"url": "http://fuzzyfox.github.com/Mozilla-Universe-Widget/",
+						"desc": [
+							"This is a small widget, created with jQuery due to nessesity, that allows you to embed the Mozilla universe map on any webpage."
+						]
+					}
+				}
             ] 
         },
         {
