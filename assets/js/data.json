@@ -4,8 +4,8 @@ mapData({
     "data": {
         "important": true,
         "url": "http://mozilla.org",
-        "icon": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/16/mozilla.png",
-        "image": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/64/mozilla.png",
+        "icon": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/16/mozilla.png",
+        "image": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/64/mozilla.png",
         "desc": [
             "The home of the Mozilla project." 
         ] 
@@ -26,8 +26,8 @@ mapData({
                     "data": {
                         "important": true,
                         "url": "http://drumbeat.org",
-                        "icon": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/16/drumbeat.png",
-                        "image": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/64/drumbeat.png",
+                        "icon": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/16/drumbeat.png",
+                        "image": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/64/drumbeat.png",
                         "desc": [
                             "Practical projects and local events that gather smart, creative people around big ideas, solving problems and building the open web." 
                         ] 
@@ -41,8 +41,8 @@ mapData({
                     "id": "labs",
                     "data": {
                         "url": "http://mozillalabs.com",
-                        "icon": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/16/labs.png",
-                        "image": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/64/labs.png",
+                        "icon": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/16/labs.png",
+                        "image": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/64/labs.png",
                         "desc": [
                             "A virtual lab where people come together to create, experiment, and play with new Web innovations and technologies." 
                         ],
@@ -70,8 +70,8 @@ mapData({
                             "id": "bespin",
                             "data": {
                                 "url": "http://bespin.mozillalabs.com",
-                                "icon": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/16/bespin.png",
-                                "image": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/64/bespin.png",
+                                "icon": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/16/bespin.png",
+                                "image": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/64/bespin.png",
                                 "desc": [
                                     "A web-based code editor using the emerging HTML5 standard." 
                                 ] 
@@ -98,8 +98,8 @@ mapData({
                             "id": "jetpack",
                             "data": {
                                 "url": "http://jetpack.mozillalabs.com",
-                                "icon": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/16/jetpack.png",
-                                "image": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/64/jetpack.png",
+                                "icon": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/16/jetpack.png",
+                                "image": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/64/jetpack.png",
                                 "desc": [
                                     "A project to make it easy to build Firefox add-ons using common web technologies." 
                                 ] 
@@ -113,8 +113,8 @@ mapData({
                             "id": "prism",
                             "data": {
                                 "url": "http://prism.mozillalabs.com",
-                                "icon": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/16/prism.png",
-                                "image": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/64/prism.png",
+                                "icon": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/16/prism.png",
+                                "image": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/64/prism.png",
                                 "desc": [
                                     "Developing an application to split web applications out of the browser to run them directly on the desktop." 
                                 ] 
@@ -128,8 +128,8 @@ mapData({
                             "id": "test-pilot",
                             "data": {
                                 "url": "http://testpilot.mozillalabs.com",
-                                "icon": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/16/testpilot.png",
-                                "image": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/64/testpilot.png",
+                                "icon": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/16/testpilot.png",
+                                "image": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/64/testpilot.png",
                                 "desc": [
                                     "Collecting and publishing structured usage data and user feedback through Firefox to build better products." 
                                 ] 
@@ -194,8 +194,8 @@ mapData({
                     "name": "Local Sites",
                     "id": "local-sites",
                     "data": {
-                        "icon": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/16/community.png",
-                        "image": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/64/community.png",
+                        "icon": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/16/community.png",
+                        "image": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/64/community.png",
                         "desc": [
                             "Sites created by and for local communities around the world." 
                         ] 
@@ -448,8 +448,8 @@ mapData({
                     "data": {
                         "important": true,
                         "url": "http://developer.mozilla.org",
-                        "icon": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/16/mdn.png",
-                        "image": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/64/mdn.png",
+                        "icon": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/16/mdn.png",
+                        "image": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/64/mdn.png",
                         "desc": [
                             "A resource for developers interested in the Web, Mobile, Add-ons, Applications and Labs." 
                         ] 
@@ -538,8 +538,8 @@ mapData({
                     "id": "qmo",
                     "data": {
                         "url": "http://quality.mozilla.org",
-                        "icon": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/16/qmo.png",
-                        "image": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/64/qmo.png",
+                        "icon": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/16/qmo.png",
+                        "image": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/64/qmo.png",
                         "desc": [
                             "Home of Mozilla's testing and quality assurance community." 
                         ] 
@@ -562,8 +562,8 @@ mapData({
                             "id": "bugzilla-tools",
                             "data": {
                                 "url": "http://bugzilla.mozilla.org",
-                                "icon": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/16/bugzilla.png",
-                                "image": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/64/bugzilla.png",
+                                "icon": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/16/bugzilla.png",
+                                "image": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/64/bugzilla.png",
                                 "desc": [
                                     "Mozilla's bug tracking system." 
                                 ] 
@@ -643,8 +643,8 @@ mapData({
                     "data": {
                         "important": true,
                         "url": "http://firefox.com",
-                        "icon": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/16/firefox.png",
-                        "image": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/64/firefox.png",
+                        "icon": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/16/firefox.png",
+                        "image": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/64/firefox.png",
                         "desc": [
                             "The award-winning Firefox Web browser has security, speed and new features that will change the way you use the Web." 
                         ] 
@@ -668,8 +668,8 @@ mapData({
                             "id": "support",
                             "data": {
                                 "url": "http://support.mozilla.com",
-                                "icon": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/16/sumo.png",
-                                "image": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/64/sumo.png",
+                                "icon": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/16/sumo.png",
+                                "image": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/64/sumo.png",
                                 "desc": [
                                     "Firefox support site." 
                                 ] 
@@ -683,8 +683,8 @@ mapData({
                             "id": "add-ons-firefox",
                             "data": {
                                 "url": "http://addons.mozilla.org",
-                                "icon": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/16/addons.png",
-                                "image": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/64/addons.png",
+                                "icon": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/16/addons.png",
+                                "image": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/64/addons.png",
                                 "desc": [
                                     "Add-ons for Firefox." 
                                 ] 
@@ -713,8 +713,8 @@ mapData({
                     "id": "bugzilla",
                     "data": {
                         "url": "http://bugzilla.org",
-                        "icon": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/16/bugzilla.png",
-                        "image": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/64/bugzilla.png",
+                        "icon": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/16/bugzilla.png",
+                        "image": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/64/bugzilla.png",
                         "desc" : [
                             "Bugzilla is a bug tracking system designed to help teams manage software development." 
                         ] 
@@ -728,8 +728,8 @@ mapData({
                     "id": "seamonkey",
                     "data": {
                         "url": "http://seamonkey-project.org",
-                        "icon": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/16/seamonkey.png",
-                        "image": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/64/seamonkey.png",
+                        "icon": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/16/seamonkey.png",
+                        "image": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/64/seamonkey.png",
                         "desc": [
                             "SeaMonkey is the all-in-one application containing a web browser, a mail and newsgroups client, an HTML editor, web development tools, and an IRC chat client." 
                         ] 
@@ -743,8 +743,8 @@ mapData({
                     "id": "lightning-sunbird",
                     "data": {
                         "url": "http://mozilla.org/projects/calendar",
-                        "icon": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/16/sunbird.png",
-                        "image": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/64/sunbird.png",
+                        "icon": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/16/sunbird.png",
+                        "image": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/64/sunbird.png",
                         "desc": [
                             "Lightning is a calendaring, scheduling and task management extension. Sunbird® is a cross-platform application that brings Mozilla-style ease-of-use to your calendar." 
                         ] 
@@ -759,8 +759,8 @@ mapData({
                     "data": {
                         "important": true,
                         "url": "http://getthunderbird.com",
-                        "icon": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/16/thunderbird.png",
-                        "image": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/64/thunderbird.png",
+                        "icon": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/16/thunderbird.png",
+                        "image": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/64/thunderbird.png",
                         "desc": [
                             "The Thunderbird email client includes intelligent spam filters, powerful search and customizable views." 
                         ] 
@@ -784,8 +784,8 @@ mapData({
                             "id": "add-ons-thunderbird",
                             "data": {
                                 "url": "http://addons.mozilla.org/thunderbird",
-                                "icon": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/16/addons.png",
-                                "image": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/64/addons.png",
+                                "icon": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/16/addons.png",
+                                "image": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/64/addons.png",
                                 "desc": [
                                     "Add-ons for Thunderbird." 
                                 ] 
@@ -801,8 +801,8 @@ mapData({
                     "id": "camino",
                     "data": {
                         "url": "http://caminobrowser.org",
-                        "icon": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/16/camino.png",
-                        "image": "http://labs.mozhunt.com/mozilla-universe-widget/assets/img/64/camino.png",
+                        "icon": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/16/camino.png",
+                        "image": "http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/64/camino.png",
                         "desc": [
                             "Camino is a Web browser optimized for Mac OS X with a Cocoa user interface, and powerful Gecko layout engine." 
                         ] 
