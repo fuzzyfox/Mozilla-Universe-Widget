@@ -1,0 +1,96 @@
+/* -- html5 tags -- */
+header, section, footer,
+aside, nav, article, figure {
+	display: block;
+}
+header, article {
+	width : 750px;
+	margin : auto;
+}
+body {
+	background : #eee;
+	font : 13px "Trebuchet MS", Verdana, Geneva, Arial, Helvetica, sans-serif;
+	line-height : 1.5;
+	color : #444;
+}
+header {
+	margin : 50px auto 5px auto;
+	padding : 0 5px;
+}
+header h1 {
+	font-size : xx-large;
+	margin-bottom : -24px;
+}
+header nav ul li {
+	display : inline;
+	padding : 4px 0;
+}
+header nav ul li:after { content : " |"; }
+header nav ul li:last-child:after { content : ""; }
+footer {
+	text-align : center;
+	text-transform : lowercase;
+}
+h1 { font-size : x-large; }
+h2 { font-size : large; }
+h3 { font-size : larger; }
+
+small { font-size : smaller; }
+
+a {
+	text-decoration : none;
+	color : #007CCF;
+}
+
+p {
+	padding : 4px 0;
+}
+
+hr {
+	border : none;
+	height : 1px;
+	line-height: 1px;
+	background : #ccc;	
+	margin : 20px 0 20px 0;
+	padding : 0;
+}
+
+footer {
+	padding : 10px;
+}
+article {
+	padding : 20px;
+	background : #fff;
+	border : 1px solid #ccc;
+	border-radius : 5px;
+	-moz-border-radius : 5px;
+	-webkit-border-radius : 5px;
+}
+/* -- classes -- */
+.clear {
+	clear : both;
+	line-height : 1px;
+	font-size : 1px;
+}
+
+.left { float : left; }
+.right { float : right; }
+
+/** specifics **/
+.github-ribbon {
+	position : fixed;
+	top : 0;
+	right : 0;
+	z-index : 999999;
+}
+#download {
+	text-align : center;
+	padding : 10px 20px;
+	width : 300px;
+	background : #eee;
+	margin : auto;
+	border : 1px solid #ccc;
+	border-radius : 5px;
+	-moz-border-radius : 5px;
+	-webkit-border-radius : 5px;
+}
