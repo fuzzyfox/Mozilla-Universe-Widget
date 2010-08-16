@@ -18,8 +18,8 @@ var mozillaUniverse = function(options){
 	{
 		console.log('jquery does not exist, load it up with the rest of the widgets needed files')
 		mozillaUniverse.getScript('http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js');
-		mozillaUniverse.getScript('http://labs.mozhunt.com/mozilla-universe-widget/assets/js/jit.min.js');
-		mozillaUniverse.getScript('http://labs.mozhunt.com/mozilla-universe-widget/assets/js/universe.js');
+		mozillaUniverse.getScript('http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/js/jit.min.js');
+		mozillaUniverse.getScript('http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/js/universe.js');
 		options.jqueryNoConflict = true;
 	}
 	else
@@ -33,8 +33,8 @@ var mozillaUniverse = function(options){
 				delete jQuery;
 				mozillaUniverse.getScript('http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js');
 			}
-			mozillaUniverse.getScript('http://labs.mozhunt.com/mozilla-universe-widget/assets/js/jit.min.js');
-			mozillaUniverse.getScript('http://labs.mozhunt.com/mozilla-universe-widget/assets/js/universe.js');
+			mozillaUniverse.getScript('http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/js/jit.min.js');
+			mozillaUniverse.getScript('http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/js/universe.js');
 			options.jqueryNoConflict = false;
 		}
 	}
@@ -85,7 +85,7 @@ mozillaUniverse.tryReady = function(timeElapsed, options){
 			//load the universe
 			//jQuery.getScript('http://labs.mozhunt.com/mozilla-universe-widget/assets/js/universe.js');
 			//load the css
-			jQuery('head').append('<link rel="stylesheet" href="http://labs.mozhunt.com/mozilla-universe-widget/assets/css/universe.css" type="text/css">');
+			jQuery('head').append('<link rel="stylesheet" href="http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/css/universe.css" type="text/css">');
 			//create the html for the map
 			var $mozillaUniverse_container = jQuery('<div id="mozillaUniverseWidget"></div>').addClass(options.type);
 			var $mozillaUniverse_map = jQuery('<div class="mozillaUniverse-map"><div id="universe-graph"><div id="universe-panel"></div></div><p class="mozillaUniverse-footnote">This map uses the HTML5 <a href="https://developer.mozilla.org/en/HTML/Canvas">canvas</a> tag, CSS3 attributes, and is powered by the open-source <a href="http://thejit.org/">JavaScript InfoVis Toolkit</a>.</p></div>');
@@ -108,7 +108,7 @@ mozillaUniverse.tryReady = function(timeElapsed, options){
 			if(jQuery('#mozillaUniverseWidget.tab').length == 0)
 			{
 				jQuery('#mozillaUniverseWidget').hide();
-				jQuery('#mozillaUniverseWidget .mozillaUniverse-map').append('<img class="close" src="http://labs.mozhunt.com/mozilla-universe-widget/assets/img/mozillaUniverseWidget-close.png" alt="close">');
+				jQuery('#mozillaUniverseWidget .mozillaUniverse-map').append('<img class="close" src="http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/mozillaUniverseWidget-close.png" alt="close">');
 			}
 			//toggle function
 			function toggleWidget()

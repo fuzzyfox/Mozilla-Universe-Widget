@@ -630,7 +630,7 @@ mozillaUniverse.universe = function(cb){
 
     };
 
-    org.mozilla.SiteMap._init('http://labs.mozhunt.com/mozilla-universe-widget/assets/js/data.json');
+    org.mozilla.SiteMap._init('http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/js/data.json');
 	if(typeof cb != 'undefined')
 	{
 		cb();

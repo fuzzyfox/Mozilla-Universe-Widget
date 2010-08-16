@@ -42,8 +42,8 @@ Usage
 append the following to the `<head>` of any page you wish
 to use the widget on:
 
-	<link href="http://labs.mozhunt.com/mozilla-universe-widget/assets/css/fuzzyfox.css" rel="stylesheet" type="text/css">
-	<script src="http://labs.mozhunt.com/mozilla-universe-widget/assets/js/fuzzyfox.js" type="text/javascript"></script>
+	<link href="http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/css/fuzzyfox.css" rel="stylesheet" type="text/css">
+	<script src="http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/js/fuzzyfox.js" type="text/javascript"></script>
 	
 To enable the tab widget you can either call the `mozilaUniverse({type:'tab'});`
 function in `<script>` tags *OR* using `<body onload="mozillaUniverse({type:'tab'})">`
