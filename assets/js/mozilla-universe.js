@@ -1,4 +1,3 @@
-
 if (!('console' in window)) {
         window.console = {};
         console.log = console.info = console.error = console.dir = function() {};
@@ -10,7 +9,9 @@ var mozillaUniverse = function(options){
 	{
 		options = {
 			type : 'link',
-			jqueryNoConflict : true
+			jqueryNoConflict : true,
+			mapWidth : 400,
+			mapHeight : 400
 		};
 	}
 	//tell system that we have not finished loading
@@ -80,10 +81,6 @@ mozillaUniverse.tryReady = function(timeElapsed, options){
 		//check if there is an istance of the map already
 		if(mozillaUniverse.finished == false)
 		{
-			//load the jit library
-			//jQuery.getScript('http://labs.mozhunt.com/mozilla-universe-widget/assets/js/jit.min.js');
-			//load the universe
-			//jQuery.getScript('http://labs.mozhunt.com/mozilla-universe-widget/assets/js/universe.js');
 			//load the css
 			jQuery('head').append('<link rel="stylesheet" href="http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/css/universe.css" type="text/css">');
 			//create the html for the map
@@ -94,10 +91,18 @@ mozillaUniverse.tryReady = function(timeElapsed, options){
 			jQuery('#mozillaUniverseWidget').show();
 		}
 		
+		//check that all options are set
+		options = jQuery.extend({
+			type : 'link',
+			jqueryNoConflict : true,
+			mapWidth : 400,
+			mapHeight : 400
+		},options);
+		
 		//tab widget
 		if(options.type == 'tab')
 		{
-			jQuery('#mozillaUniverseWidget').append('<div class="mozillaUniverse-toggle"><div class="mozillaUniverse-toggle-tab"></div></div>');
+			jQuery('#mozillaUniverseWidget').append('<div class="mozillaUniverse-toggle"><div class="mozillaUniverse-toggle-tab"><img src="http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/mozilla-universe-tab.png"></div></div>');
 			jQuery('#mozillaUniverseWidget .mozillaUniverse-toggle-tab').click(function(){
 				jQuery('#mozillaUniverseWidget .mozillaUniverse-map').slideToggle('slow');
 			});
@@ -146,7 +151,8 @@ mozillaUniverse.tryReady = function(timeElapsed, options){
 			else if(mozillaUniverse.finished == false)
 			{
 				console.log('map exists, but not loaded. attempting to load');
-				mozillaUniverse.universe(function(){
+				alert(options.mapWidth);
+				mozillaUniverse.universe(options, function(){
 					console.log('map loaded. setting youAreHere');
 					var baseLocation = location.href.split('#')[0];
 					location.href = baseLocation + '#' + options.youAreHere;
