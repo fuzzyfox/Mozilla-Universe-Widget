@@ -151,7 +151,6 @@ mozillaUniverse.tryReady = function(timeElapsed, options){
 			else if(mozillaUniverse.finished == false)
 			{
 				console.log('map exists, but not loaded. attempting to load');
-				alert(options.mapWidth);
 				mozillaUniverse.universe(options, function(){
 					console.log('map loaded. setting youAreHere');
 					var baseLocation = location.href.split('#')[0];
