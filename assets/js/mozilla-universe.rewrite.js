@@ -109,7 +109,8 @@ mozillaUniverse.widget = function(options){
 			dataUrl : 'http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/js/data.json' //this will allow users to set a custom map, allowing the widget to be easily modified for other communities
 		}
 	};
-	options = jQuery.extend(defaultOptions, options);
+	options.widget = jQuery.extend(defaultOptions.widget, options.widget);
+	options.map = jQuery.extend(defaultOptions.map, options.map);
 	
 	/*
 	 Create/load the widget html/css
