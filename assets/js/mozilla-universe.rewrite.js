@@ -8,7 +8,7 @@ if('console' in window)
 //check that the widget is not already loaded
 if(typeof mozillaUniverse != 'undefined')
 {
-	var mozillaUniverse;
+	var mozillaUniverse = {};
 	mozillaUniverse.exists = false;
 }
 else
