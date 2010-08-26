@@ -33,6 +33,7 @@
 	background : -moz-linear-gradient(top, #3387c3, #1f4364);
 	background : -webkit-gradient(linear, top left, bottom, left, from(#3387c3), to(#1f4364));
 	z-index : 999999;
+	width : 100%;
 }
 #mozilla-universe-widget.tab #mozilla-universe-overlay {
 	display : none;
