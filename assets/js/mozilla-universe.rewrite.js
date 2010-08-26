@@ -203,7 +203,7 @@ mozillaUniverse.widget = function(options){
 	*/
 	
 	//load the recursive function and send it only the options for the map
-	mozillaUniverse.tryMap(options.map);
+	mozillaUniverse.tryMap(0, options.map);
 };
 
 //this function is almost identical to tryReady, except it looks for the map and displays an error to the page if not found
