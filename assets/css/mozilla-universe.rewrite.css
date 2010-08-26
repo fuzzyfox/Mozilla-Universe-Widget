@@ -1,10 +1,10 @@
 /*
  main widget styling, identical throughout the themes
 */
-#mozilla-universe-widget {
+.mozilla-universe-widget {
 	display : none;
 }
-#mozilla-universe-overlay {
+.mozilla-universe-overlay {
 	background : #fff;
 	border : 1px solid #fff;
 	border-radius : 5px;
@@ -25,7 +25,7 @@
 /*
  tab theme
 */
-#mozilla-universe-widget.tab {
+.mozilla-universe-widget.tab {
 	position : absolute;
 	top : 0;
 	left : 0;
@@ -36,7 +36,7 @@
 	width : 100%;
 	display : block;
 }
-#mozilla-universe-widget.tab .mozilla-universe-overlay {
+.mozilla-universe-widget.tab .mozilla-universe-overlay {
 	display : none;
 }
 #mozilla-universe-toggle {

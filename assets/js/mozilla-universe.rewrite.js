@@ -117,9 +117,9 @@ mozillaUniverse.widget = function(options){
 	//okay, so we have some esensials to cover first. Such as the css for the map needs to be loaded
 	jQuery('head').append('<link rel="stylesheet" href="http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/css/universe.css" type="text/css">');
 	//and the html container for the widget
-	var $mozillaUniverse_container = jQuery('<div id="mozilla-universe-widget"></div>').addClass(options.widget.theme);
+	var $mozillaUniverse_container = jQuery('<div class="mozilla-universe-widget"></div>').addClass(options.widget.theme);
 	//the container for the map [we call this the overlay]
-	var $mozillaUniverse_overlay = jQuery('<div class="mozilla-universe-overlay"><div id="mozilla-universe-map"><div id="universe-graph"><div id="universe-panel"></div></div></div></div>');
+	var $mozillaUniverse_overlay = jQuery('<div class="mozilla-universe-overlay"><div class="mozilla-universe-map"><div id="universe-graph"><div id="universe-panel"></div></div></div></div>');
 	//add the footnote to the widget
 	var $mozillaUniverse_footnote = jQuery('<p id="mozilla-universe-footnote">'+ options.widget.footnote +'</p>');
 	//append footnote to overlay
@@ -155,12 +155,12 @@ mozillaUniverse.widget = function(options){
 			
 			//click on the toggle tab
 			jQuery('#mozilla-universe-tab').click(function(){
-				jQuery('#mozilla-universe-overlay').slideToggle('slow');
+				jQuery('.mozilla-universe-overlay').slideToggle('slow');
 			});
 			
 			//click on a custom trigger
 			jQuery('[rel=mozilla-universe]').click(function(){
-				jQuery('#mozilla-universe-overlay').slideToggle('slow');
+				jQuery('.mozilla-universe-overlay').slideToggle('slow');
 			});
 			
 			
@@ -172,7 +172,7 @@ mozillaUniverse.widget = function(options){
 			*/
 			
 			//remove the widget from its current location
-			jQuery('#mozilla-universe-widget').remove();
+			jQuery('.mozilla-universe-widget').remove();
 			//write it out to where the function was called
 			document.write($mozillaUniverse_container);
 			//show the widget
@@ -186,12 +186,12 @@ mozillaUniverse.widget = function(options){
 			*/
 			
 			//add a close button to the widget
-			jQuery('#mozilla-universe-overlay').append('<img id="mozilla-universe-close" src="http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/mozillaUniverseWidget-close.png" alt="close">');
+			jQuery('.mozilla-universe-overlay').append('<img id="mozilla-universe-close" src="http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/mozillaUniverseWidget-close.png" alt="close">');
 			
 			//add event listeners to triggers and to the close button
 			jQuery('[rel=mozilla-universe]').click(function(){
 				$mozillaUniverse_conatiner.fadeIn('slow', function(){
-					jQuery('#mozilla-universe-close').click(function(){
+					jQuery('.mozilla-universe-close').click(function(){
 						$mozillaUniverse_container.fadeOut('slow');
 					});
 				});
