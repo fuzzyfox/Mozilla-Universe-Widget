@@ -119,7 +119,7 @@ mozillaUniverse.widget = function(options){
 	//and the html container for the widget
 	var $mozillaUniverse_container = jQuery('<div id="mozilla-universe-widget"></div>').addClass(options.widget.theme);
 	//the container for the map [we call this the overlay]
-	var $mozillaUniverse_overlay = jQuery('<div id="mozilla-universe-overlay"><div id="mozilla-universe-map"><div id="universe-graph"><div id="universe-panel"></div></div></div></div>');
+	var $mozillaUniverse_overlay = jQuery('<div class="mozilla-universe-overlay"><div id="mozilla-universe-map"><div id="universe-graph"><div id="universe-panel"></div></div></div></div>');
 	//add the footnote to the widget
 	var $mozillaUniverse_footnote = jQuery('<p id="mozilla-universe-footnote">'+ options.widget.footnote +'</p>');
 	//append footnote to overlay
@@ -226,7 +226,7 @@ mozillaUniverse.tryMap = function(timeElapsed, options)
 		{
 			//something went wrong and the map wont load, time to break the news to the developer and the people viewing the page
 			console.log('Woops! It seems that we failed to load the map for you... sorry about this :\'(');
-			jQuery('#mozilla-universe-map').append('<p>We regret to announce that the map you are supposed to see here will not be loading right now... instead pleace visit <a href="http://www.mozilla.org/community">www.mozilla.org/community</a> to view it.</p>');
+			jQuery('#mozilla-universe-overlay').append('<p>We regret to announce that the map you are supposed to see here will not be loading right now... instead pleace visit <a href="http://www.mozilla.org/community">www.mozilla.org/community</a> to view it.</p>');
 		}
 	}
 	else
