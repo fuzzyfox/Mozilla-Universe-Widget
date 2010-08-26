@@ -58,7 +58,9 @@ mozillaUniverse = function(options, callback){
 
 //simple function to get and load scripts
 mozillaUniverse.getScript = function(filename){
-	var script = document.createElement('script').setAttribute('type', 'text/javascript').setAttribute('src', filename);
+	var script = document.createElement('script');
+	script.setAttribute('type', 'text/javascript');
+	script.setAttribute('src', filename);
 	document.getElementsByTagName('head')[0].appendChild(script);
 };
 
