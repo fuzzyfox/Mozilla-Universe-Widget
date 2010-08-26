@@ -109,7 +109,7 @@ mozillaUniverse.widget = function(options){
 			dataUrl : 'http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/js/data.json' //this will allow users to set a custom map, allowing the widget to be easily modified for other communities
 		}
 	};
-	jQuery.extend(defaultOptions, options);
+	options = jQuery.extend(defaultOptions, options);
 	
 	/*
 	 Create/load the widget html/css
@@ -203,8 +203,7 @@ mozillaUniverse.widget = function(options){
 	*/
 	
 	//load the recursive function and send it only the options for the map
-	options = options.map;
-	mozillaUniverse.tryMap(0, options);
+	mozillaUniverse.tryMap(0, options.map);
 };
 
 //this function is almost identical to tryReady, except it looks for the map and displays an error to the page if not found
