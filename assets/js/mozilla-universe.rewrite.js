@@ -147,7 +147,7 @@ mozillaUniverse.widget = function(options){
 			$mozillaUniverse_container.append('<div id="mozilla-universe-toggle"><div id="mozilla-universe-tab"><img src="http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/mozilla-universe-tab.png" alt="mozilla"></div></div>');
 			
 			//all html loaded, now to show the widget
-			$mozillaUniverse_container.show();
+			jQuery('#mozilla-universe-widget').show();
 			
 			/*
 			 add event handlers to toggle the widget
