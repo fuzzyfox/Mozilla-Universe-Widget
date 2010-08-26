@@ -120,10 +120,13 @@ mozillaUniverse.widget = function(options){
 	var $mozillaUniverse_container = jQuery('<div id="mozilla-universe-widget"></div>').addClass(options.widget.theme);
 	//the container for the map [we call this the overlay]
 	var $mozillaUniverse_overlay = jQuery('<div id="mozilla-universe-overlay"><div id="mozilla-universe-map"><div id="universe-graph"><div id="universe-panel"></div></div></div></div>');
+	//add the footnote to the widget
+	var $mozillaUniverse_footnote = jQuery('<p id="mozilla-universe-footnote">'+ options.widget.footnote +'</p>');
+	//append footnote to overlay
+	$mozillaUniverse_overlay.append($mozillaUniverse_footnote);
 	//add the map overlay to the widget
 	$mozillaUniverse_container.append($mozillaUniverse_overlay);
-	//add the footnote to the widget
-	jQuery('#mozilla-universe-footnote').append('<p id="mozilla-universe-footnote">'+ options.widget.footnote +'</p>');
+	
 	
 	//add all this widgety goodness to the page at long last
 	jQuery('body').append($mozillaUniverse_container);
