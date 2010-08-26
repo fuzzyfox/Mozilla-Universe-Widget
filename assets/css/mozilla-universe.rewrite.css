@@ -38,6 +38,8 @@
 }
 .mozilla-universe-widget.tab .mozilla-universe-overlay {
 	display : none;
+	width : 90%;
+	margin : 20px auto;
 }
 #mozilla-universe-toggle {
 	position : absolute;
