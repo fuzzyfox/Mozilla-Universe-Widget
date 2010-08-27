@@ -5,23 +5,24 @@ if(!'console' in window)
 	console.log = console.info = console.error = console.dir = function(){};
 }
 
-//create the mozillaUniverse namespace/function
-var mozillaUniverse = {};
+//check that the widget is not already loaded
+if(typeof mozillaUniverse == 'undefined')
+{
+	var mozillaUniverse = {};
+	mozillaUniverse.exists = false;
+}
+else
+{
+	mozillaUniverse.exists = true;
+}
 
+//create the mozillaUniverse namespace/function
 mozillaUniverse = function(options, callback){
-	//check that the widget is not already loaded
-	if(typeof mozillaUniverse.map == 'undefined')
-	{
-		mozillaUniverse.exists = false;
-	}
-	else
-	{
-		mozillaUniverse.exists = true;
-	}
 	
 	//check that the needed files to make the magic work do not exist before loading anything else
 	if(!mozillaUniverse.exists)
 	{
+		mozillaUniverse.exists = true;
 		//detect if jQuery is in existance and if so that it is up-to-date else update it to version 1.4.2
 		if((typeof jQuery != 'undefined') && (jQuery().jquery != '1.4.2'))
 		{
@@ -48,7 +49,7 @@ mozillaUniverse = function(options, callback){
 	else
 	{
 		//ah... someone is trying to call the widget twice... this just wont work... time to inform them of this
-		console.log('you appear to be attempting to load the mozilla universe widget twice... you cannot load this twice, but don\'t worry, we just wont let you :D');
+		console.log('you appear to be attempting to load the mozilla universe widget twice... you cannot load this twice, but don\' worry, we just wont let you :D');
 	}
 	
 	if(typeof callback != 'undefined')
