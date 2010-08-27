@@ -1,23 +1,24 @@
 //check that there is a console to log messages to
-if('console' in window)
+if(!'console' in window)
 {
 	window.console = {};
 	console.log = console.info = console.error = console.dir = function(){};
 }
 
-//check that the widget is not already loaded
-if(typeof mozillaUniverse == 'undefined')
-{
-	var mozillaUniverse = {};
-	mozillaUniverse.exists = false;
-}
-else
-{
-	mozillaUniverse.exists = true;
-}
-
 //create the mozillaUniverse namespace/function
+var mozillaUniverse = {};
+
 mozillaUniverse = function(options, callback){
+	//check that the widget is not already loaded
+	if(typeof mozillaUniverse.map == 'undefined')
+	{
+		mozillaUniverse.exists = false;
+	}
+	else
+	{
+		mozillaUniverse.exists = true;
+	}
+	
 	//check that the needed files to make the magic work do not exist before loading anything else
 	if(!mozillaUniverse.exists)
 	{
@@ -47,7 +48,7 @@ mozillaUniverse = function(options, callback){
 	else
 	{
 		//ah... someone is trying to call the widget twice... this just wont work... time to inform them of this
-		console.log('the mozilla universe widget alreay appears to be loaded... you cannot load this twice, but don\' worry, we just wont let you :D');
+		console.log('you appear to be attempting to load the mozilla universe widget twice... you cannot load this twice, but don\'t worry, we just wont let you :D');
 	}
 	
 	if(typeof callback != 'undefined')
