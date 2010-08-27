@@ -151,7 +151,7 @@ mozillaUniverse.widget = function(options){
 			 add event handlers to toggle the widget
 			*/
 			
-			$mozillaUniverse_conainter.show();
+			$mozillaUniverse_container.show();
 			
 			//click on the toggle tab
 			jQuery('#mozilla-universe-tab').click(function(){
