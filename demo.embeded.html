@@ -1,0 +1,28 @@
+<!doctype html>
+	<html lang="en">
+		<head>
+			<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+				
+			<link href="http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/css/mozilla-universe.css" rel="stylesheet" type="text/css">
+			<script src="http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/js/mozilla-universe.js" type="text/javascript"></script>
+			
+			<title>Community Map Widget</title>
+		</head>
+		<body>
+			<!-- widget container -->
+			<div id="mozilla-universe-embed">
+				<!-- you can place an optional error message here like we have -->
+				<p>Oops! It looks like the map you are meant to see wont load... never fear!</p>
+				<p><a href="http://www.mozilla.org/community">There is another way to see it here!</a></p>
+			</div>
+			
+			<!-- javascript to load the widget -->
+			<script type="text/javascript">
+				mozillaUniverse({
+					widget : {
+						theme : 'embed'
+					}
+				});
+			</script>
+		</body>
+	</html>
