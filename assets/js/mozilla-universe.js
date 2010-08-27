@@ -102,6 +102,7 @@ mozillaUniverse.widget = function(options){
 	var defaultOptions = {
 		widget : {
 			theme : 'default', //this could be [tab, embed, defaut]. "default" is an overlay, lightbox style,
+			parent : 'body', //this is whatever is to wrap the widget
 			footnote : 'This map uses the HTML5 <a href="https://developer.mozilla.org/en/HTML/Canvas">canvas</a> tag, CSS3 attributes, and is powered by the open-source <a href="http://thejit.org/">JavaScript InfoVis Toolkit</a>.' //this is an option so that it can be localised where needed
 		},
 		map : {
@@ -130,10 +131,6 @@ mozillaUniverse.widget = function(options){
 	//add the map overlay to the widget
 	$mozillaUniverse_container.append($mozillaUniverse_overlay);
 	
-	
-	//add all this widgety goodness to the page at long last
-	jQuery('body').append($mozillaUniverse_container);
-	
 	/*
 	 create the event listeners for the widget depending on the theme chosen.
 		also load any additional html/css that this theme may require
@@ -149,10 +146,12 @@ mozillaUniverse.widget = function(options){
 			//add the toggle tab html to the widget
 			$mozillaUniverse_container.append('<div id="mozilla-universe-toggle"><div id="mozilla-universe-tab"><img src="http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/mozilla-universe-tab.png" alt="mozilla"></div></div>');
 			
+			//add all this widgety goodness to the page at long last
+			jQuery(options.widget.parent).append($mozillaUniverse_container);
+			
 			/*
 			 add event handlers to toggle the widget
 			*/
-			
 			$mozillaUniverse_container.show();
 			
 			//click on the toggle tab
@@ -168,16 +167,33 @@ mozillaUniverse.widget = function(options){
 			
 			
 		break;
+		case 'footer':
+			/*
+			 lets keep this one nice an simple. A close button, and an event handler
+				or two
+			*/
+			
+			//add all this widgety goodness to the page at long last
+			jQuery(options.widget.parent).prepend($mozillaUniverse_container);
+			jQuery('.mozilla-universe-overlay').append('<img id="mozilla-universe-close" src="http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/mozillaUniverseWidget-close.png" alt="close">');
+			
+			jQuery('[rel=mozilla-universe]').click(function(){
+				$mozillaUniverse_container.slideToggle('slow');
+				return false;
+			});
+			
+			jQuery('#mozilla-universe-close').click(function(){
+				$mozillaUniverse_container.slideToggle('slow');
+			});
+		break;
 		case 'embed':
 			
 			/*
 			 this is the one which needs some work, but lets just give it a go...
 			*/
 			
-			//remove the widget from its current location
-			jQuery('.mozilla-universe-widget').remove();
 			//write it out to where the function was called
-			jQuery('div#mozilla-universe-embed').html($mozillaUniverse_container);
+			jQuery(options.theme.parent).html($mozillaUniverse_container);
 			//set the width of the widget
 			jQuery('.mozilla-universe-overlay').width((options.map.maxWidth + 200));
 			//show the widget
@@ -189,6 +205,9 @@ mozillaUniverse.widget = function(options){
 			/*
 			 time to do some overlay magic
 			*/
+			
+			//add the widget to the page
+			jQuery(options.widget.parent).append($mozillaUniverse_container);
 			
 			//add a close button to the widget
 			jQuery('.mozilla-universe-overlay').append('<img id="mozilla-universe-close" src="http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/mozillaUniverseWidget-close.png" alt="close">');
