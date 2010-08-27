@@ -10,7 +10,7 @@
 			
 			<title>Mozilla Universe Widget @ GitHub</title>
 		</head>
-		<body onload="mozillaUniverse({type:'tab', youAreHere:'mozilla-universe-widget'})">
+		<body onload="mozillaUniverse({widget:{theme:'tab'}, map:{defaultNode:'mozilla-universe-widget'}})">
 			<a class="github-ribbon" href="http://github.com/fuzzyfox/Mozilla-Universe-Widget"><img src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 			<header>
 				<nav class="right">
@@ -64,10 +64,14 @@
 					as an object like the one below</em></p>
 					<pre><code>
 options = {
-	type : 'link',
-	//sets how the widget displays. can be "link" or "tab"
-	youAreHere : ''
-	//this can be any valid node id for the map. e.g. "mozilla-europe", "drumbeat", etc...
+	widget : {
+		theme : 'default', //can be [default, tab, embed]
+	},
+	map : {
+		maxWidth : 400, //set the max width of the acutal map
+		maxHeight : 400, //set the max height of the actual map
+		defaultNode : 'mozilla' //set the default location on the map "You are here" feature
+	}
 }
 					</code></pre>
 					
