@@ -1,4 +1,4 @@
-mozillaUniverse.universe = function(options, callback){
+mozillaUniverse.map = function(options, callback){
 	
     // namespaces
     if (typeof org == 'undefined') {
@@ -53,7 +53,7 @@ mozillaUniverse.universe = function(options, callback){
         getWidth: function()
         {
             // extra 200 px is to give space for hover labels
-            return Math.max(options.mapWidth, org.mozilla.SiteMap.$graph.width() - 200);
+            return Math.max(options.maxWidth, org.mozilla.SiteMap.$graph.width() - 200);
         },
 
         /**
@@ -62,9 +62,9 @@ mozillaUniverse.universe = function(options, callback){
         getHeight: function()
         {
             if (document.all) {
-                return Math.max(options.mapHeight, document.body.offsetHeight - 200);
+                return Math.max(options.maxHeight, document.body.offsetHeight - 200);
             } else {
-                return Math.max(options.mapHeight, window.innerHeight - 200);
+                return Math.max(options.maxHeight, window.innerHeight - 200);
             }
         },
 
@@ -630,7 +630,7 @@ mozillaUniverse.universe = function(options, callback){
 
     };
 
-    org.mozilla.SiteMap._init('http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/js/data.json');
+    org.mozilla.SiteMap._init(options.dataUrl);
 	if(typeof callback != 'undefined')
 	{
 		callback();
