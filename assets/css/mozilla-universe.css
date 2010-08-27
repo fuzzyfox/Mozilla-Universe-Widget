@@ -103,7 +103,7 @@
 /*
  embed theme
 */
-.mozilla-universe-overlay {
+.mozilla-universe-widget.embed .mozilla-universe-overlay {
 	margin : 20px;
 	box-shadow : 0 0 5px rgba(0, 0, 0, .5);
 	-moz-box-shadow : 0 0 5px rgba(0, 0, 0, .5);
