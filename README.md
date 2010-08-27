@@ -18,6 +18,9 @@ Features
 of code and your off!
 * can be used in conjunction with any javascript library.
 * location indicator (showing where in the universe you currently are)
+* dropdown widget theme
+* embeded widget theme
+* overlay (lightbox) theme
 
 **WARNING!** If using this with a site that uses and/or requires
 the use of jQuery below version 1.4.2 it will replace this with
@@ -45,12 +48,13 @@ to use the widget on:
 	<link href="http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/css/fuzzyfox.css" rel="stylesheet" type="text/css">
 	<script src="http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/js/fuzzyfox.js" type="text/javascript"></script>
 	
-To enable the tab widget you can either call the `mozilaUniverse({type:'tab'});`
-function in `<script>` tags *OR* using `<body onload="mozillaUniverse({type:'tab'})">`
+To enable the tab widget you can either call the `mozilaUniverse();`
+function in `<script>` tags *OR* using `<body onload="mozillaUniverse()">`
 instead of a simple `<body>`.
 
-To enable the widget when a link is clicked just use `onclick="mozillaUniverse()"`
+To enable the widget in a link just add `rel="mozilla-universe"`
 in any link or button you wish to trigger the widget.
+
 ## options
 there are some extra options available to you to enhance the experience
 you get when using this widget. Below are of all the options you
@@ -58,10 +62,14 @@ can set and what they do. *These have to be passed into `mozillaUniverse(options
 as an object like the one below*
 
 	options = {
-		type : 'link',
-		//sets how the widget displays. can be "link" or "tab"
-		youAreHere : ''
-		//this can be any valid node id for the map. e.g. "mozilla-europe", "drumbeat", etc...
+		widget : {
+			theme : 'default', //can be [default, tab, embed]
+		},
+		map : {
+			maxWidth : 400, //set the max width of the acutal map
+			maxHeight : 400, //set the max height of the actual map
+			defaultNode : 'mozilla' //set the default location on the map "You are here" feature
+		}
 	}
 
 Credits
@@ -96,3 +104,10 @@ August 16th, 2010
 -----------------
 * added initial work on jQuery plugin version
 * discovered unknown bug in link trigger that can prevent widget toggle
+
+August 27th, 2010
+-----------------
+* rewrote mozilla-universe.js to allow for more customisation and better options format
+* added an embedable version of the widget
+* themed an overlay version of the widget
+* broke the jQuery plugin version... [needs a rewrite to catch up with standard version]

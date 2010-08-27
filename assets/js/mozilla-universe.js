@@ -177,7 +177,8 @@ mozillaUniverse.widget = function(options){
 			//remove the widget from its current location
 			jQuery('.mozilla-universe-widget').remove();
 			//write it out to where the function was called
-			jQuery('div#mozilla-universe-embed').append($mozillaUniverse_container);
+			jQuery('div#mozilla-universe-embed').html($mozillaUniverse_container);
+			//set the width of the widget
 			jQuery('.mozilla-universe-overlay').width((options.map.maxWidth + 200));
 			//show the widget
 			$mozillaUniverse_container.show();
