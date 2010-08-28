@@ -193,7 +193,7 @@ mozillaUniverse.widget = function(options){
 			*/
 			
 			//write it out to where the function was called
-			jQuery(options.theme.parent).html($mozillaUniverse_container);
+			jQuery(options.widget.parent).html($mozillaUniverse_container);
 			//set the width of the widget
 			jQuery('.mozilla-universe-overlay').width((options.map.maxWidth + 200));
 			//show the widget
