@@ -101,10 +101,32 @@
 &lt;script type="text/javascript"&gt;
 	mozillaUniverse({
 		<strong>widget : {
-			theme : 'embed'
+			theme : 'embed',
+			parent : '#mozilla-universe-embed'
 		}</strong>
 	});
 &lt;/script&gt;
+					</code></pre>
+					
+					<h3>Footer Theme <small>slideup effect</small></h3>
+					<p>In reality this is just a modification of the <a href="#tab">tab</a> theme but designed for footers.</p>
+					<iframe src="demo.footer.html" frameborder="0"></iframe>
+					<pre><code>
+&lt;!-- javascript to load the widget --&gt;
+&lt;script type="text/javascript"&gt;
+	mozillaUniverse({
+		<strong>widget : {
+			theme : 'footer',
+			parent : '#footer'
+		}</strong>
+	});
+&lt;/script&gt;
+&lt;!-- widget trigger / toggle switch [optional] --&gt;
+&lt;a href="http://www.mozilla.org/community" rel="mozilla-universe"&gt;trigger from any element that has &lt;em&gt;rel="mozilla-universe"&lt;/em&gt;&lt;/a&gt;
+
+&lt;div id="footer"&gt;
+	&lt;p&gt;This is a demonstration footer. It has no actual meaning, it is only to show widget functionality.&lt;/p&gt;
+&lt;/div&gt;
 					</code></pre>
 				</section>
 			</article>
