@@ -87,8 +87,12 @@ Toolkit.
 License
 -------
 **Attribution-ShareAlike 3.0 (or later) Unported**
+This is for all images, designs and textual content of the widget.
 
 http://creativecommons.org/licenses/by-sa/3.0/
+
+**MPL 1.1/LGPL 2.1/GPL 2.0**
+This is for all code unless otherwise stated.
 
 ChangeLog
 =========
@@ -111,3 +115,32 @@ August 27th, 2010
 * added an embedable version of the widget
 * themed an overlay version of the widget
 * broke the jQuery plugin version... [needs a rewrite to catch up with standard version]
+
+
+***** BEGIN LICENSE BLOCK *****
+Version: MPL 1.1/LGPL 2.1/GPL 2.0
+
+The contents of this file are subject to the Mozilla Public License Version 
+1.1 (the "License"); you may not use this file except in compliance with
+...
+for the specific language governing rights and limitations under the
+License.
+
+The Original Code is to take the Mozilla Community Map from www.mozilla.org/community and make it into an easy to implement widget that can be used on multiple domains.
+
+The Initial Developer of the Original Code is
+William Duyck (aka FuzzyFox)
+Portions created by the Initial Developer are Copyright (C) 2007
+the Initial Developer. All Rights Reserved.
+
+Contributor(s):
+  David w Boswell
+  Lathan Bidwell
+  Gijs Kruitbosch
+
+Alternatively, the contents of this file may be used under the terms of
+either of the GNU General Public License Version 2 or later (the "GPL"),
+...
+the terms of any one of the MPL, the GPL or the LGPL.
+
+***** END LICENSE BLOCK *****
