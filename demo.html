@@ -2,7 +2,7 @@
 	<html lang="en">
 		<head>
 			<meta charset="utf-8">
-			<link rel="stylesheet" href="http://fuzzyfox.github.com/Mozilla-Universe-Widget/style.css" type="text/css">
+			<link rel="stylesheet" href="assets/css/style.css" type="text/css">
 			
 			<style type="text/css">
 				article {
@@ -26,6 +26,7 @@
 			<header>
 				<nav class="right">
 					<ul>
+						<li><a href="./">home</a></li>
 						<li><a href="http://github.com/fuzzyfox/Mozilla-Universe-Widget/zipball/master">zip</a></li>
 						<li><a href="http://github.com/fuzzyfox/Mozilla-Universe-Widget/tarball/master">tar</a></li>
 					</ul>
@@ -43,7 +44,7 @@
 					<h2>Demonstrations</h2>
 					<p>Currently there are 3 ways to use the widget. Below we will see what these are, as well as the basic implimentation needed to get each option</p>
 					<h3>Common requirement</h3>
-					<p>For any of these options to display you must have the following 2 lines of code in your <pre>&lt;head&gt;</pre></p>
+					<p>For any of these options to display you must have the following 2 lines of code in your <em>&lt;head&gt;</em></p>
 					<p><strong>NOTE:</strong> you can only have one instance of the widget per page. You can however have multiple triggers.</p>
 					<pre><code>
 &lt;link href="http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/css/mozilla-universe.css" rel="stylesheet" type="text/css"&gt;
@@ -53,7 +54,7 @@
 					<h3>Default Theme <small>overlay/lightbox effect</small></h3>
 					<p>This is the most basic and likely the most common usage of the widget.</p>
 					<iframe src="demo.overlay.html" frameborder="0"></iframe>
-					To get this you simply have to load the widget and add the <pre>rel="mozilla-universe"</pre> to any element 
+					To get this you simply have to load the widget and add the <em>rel="mozilla-universe"</em> to any element 
 					you want to toggle the widget when clicked.
 					<pre><code>
 &lt;!-- javascript to load the widget --&gt;
@@ -69,7 +70,7 @@
 					<p>This is one of the more styled versions of the widget. It displays a small tab at the very top
 					of the page which, when clicked, opens the widget</p>
 					<iframe src="demo.dropdown.html" frameborder="0"></iframe>
-					To get this you have to set the <pre>theme</pre> option in the widget like so.
+					To get this you have to set the <em>theme</em> option in the widget like so.
 					<pre><code>
 &lt;!-- javascript to load the widget --&gt;
 &lt;script type="text/javascript"&gt;
@@ -100,10 +101,32 @@
 &lt;script type="text/javascript"&gt;
 	mozillaUniverse({
 		<strong>widget : {
-			theme : 'embed'
+			theme : 'embed',
+			parent : '#mozilla-universe-embed'
 		}</strong>
 	});
 &lt;/script&gt;
+					</code></pre>
+					
+					<h3>Footer Theme <small>slideup effect</small></h3>
+					<p>In reality this is just a modification of the <a href="#tab">tab</a> theme but designed for footers.</p>
+					<iframe src="demo.footer.html" frameborder="0" style="height:600px"></iframe>
+					<pre><code>
+&lt;!-- javascript to load the widget --&gt;
+&lt;script type="text/javascript"&gt;
+	mozillaUniverse({
+		<strong>widget : {
+			theme : 'footer',
+			parent : '#footer'
+		}</strong>
+	});
+&lt;/script&gt;
+&lt;!-- widget trigger / toggle switch [optional] --&gt;
+&lt;a href="http://www.mozilla.org/community" rel="mozilla-universe"&gt;trigger from any element that has &lt;em&gt;rel="mozilla-universe"&lt;/em&gt;&lt;/a&gt;
+
+&lt;div id="footer"&gt;
+	&lt;p&gt;This is a demonstration footer. It has no actual meaning, it is only to show widget functionality.&lt;/p&gt;
+&lt;/div&gt;
 					</code></pre>
 				</section>
 			</article>
