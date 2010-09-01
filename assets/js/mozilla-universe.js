@@ -39,7 +39,20 @@ mozillaUniverse = function(options, callback){
 			mozillaUniverse.getScript('http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js');
 			options.noConflict = true;
 		}
-		//jQuery has been sorted, now just to load the remaining universe related files
+		/*
+		 jQuery has been sorted, now just to load the remaining universe related files
+		*/
+		
+			/*
+			 okay so some people viewing this widget may be using IE and so may not have a canvas for the map to use
+				lets check for IE and load excanvas.js if we have to
+			*/
+			if(/MSIE \d+\.\d+/.test(navigator.userAgent))
+			{
+				mozillaUniverse.getScript('http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/js/excanvas.js');
+			}
+		
+		//the absolute must haves!
 		mozillaUniverse.getScript('http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/js/jit.min.js');
 		mozillaUniverse.getScript('http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/js/universe.js');
 		
