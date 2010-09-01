@@ -1,0 +1,119 @@
+/*
+ main widget styling, identical throughout the themes
+*/
+.mozilla-universe-widget {
+	display : none;
+}
+.mozilla-universe-overlay {
+	background : #fff;
+	border : 1px solid #fff;
+	border-radius : 5px;
+	-moz-border-radius : 5px;
+	-webkit-border-radius : 5px;
+	padding : 10px;
+}
+#mozilla-universe-footnote {
+	color : #999;
+	font : 11px "Trebuchet MS", Verdana, Geneva, Arial, Helvetica, sans-serif;
+	padding : 10px;
+	margin : 0;
+	text-align : right;
+}
+#mozilla-universe-footnote a {
+	color : #5393b7;
+	text-decoration : none;
+}
+/*
+ tab theme
+*/
+.mozilla-universe-widget.tab {
+	position : absolute;
+	top : 0;
+	left : 0;
+	background : #3387c3;
+	background : -moz-linear-gradient(top, #3387c3, #1f4364);
+	background : -webkit-gradient(linear, left top, left bottom, from(#3387c3), to(#1f4364));
+	z-index : 999999;
+	width : 100%;
+}
+.mozilla-universe-widget.tab .mozilla-universe-overlay {
+	display : none;
+	width : 90%;
+	margin : 20px auto;
+}
+#mozilla-universe-toggle {
+	position : absolute;
+	bottom : -2px;
+	left : 0;
+	width : 100%;
+	height : 2px;
+	background : #1f4364;
+}
+#mozilla-universe-tab {
+	position : absolute;
+	bottom : -30px;
+	right : 10%;
+	
+	display : block;
+	width : 88px;
+	height : 20px;
+	overflow : hidden;
+	padding : 5px 10px 5px 10px;
+	
+	background : #1f4364;
+	background : -moz-linear-gradient(top, #1f4364, #0d2a43);
+	background : -webkit-gradient(linear, left top, left bottom, from(#1f4364), to(#0d2a43));
+	
+	border : none;
+	border-radius : 0 0 5px 5px;
+	-moz-border-radius : 0 0 5px 5px;
+	-webkit-border-radius : 0 0 5px 5px;
+}
+
+/*
+ overlay (default) theme
+*/
+.mozilla-universe-widget.default {
+	background : rgba(0, 0, 0, .7);
+	height : 100%;
+	width : 100%;
+	position : absolute;
+	top : 0;
+	left : 0;
+	z-index : 999999;
+}
+.mozilla-universe-widget.default .mozilla-universe-overlay {
+	width : 800px;
+	margin : auto;
+	position : relative;
+}
+#mozilla-universe-close {
+	position : absolute;
+	top : -18px;
+	right : -18px;
+	padding : 10px;
+	margin : 4px;
+	background : #fff;
+	border : none;
+	border-radius : 15px;
+	-moz-border-radius : 15px;
+	-webkit-border-radius : 15px;
+}
+
+/*
+ embed theme
+*/
+.mozilla-universe-widget.embed .mozilla-universe-overlay {
+	margin : 20px;
+	box-shadow : 0 0 5px rgba(0, 0, 0, .5);
+	-moz-box-shadow : 0 0 5px rgba(0, 0, 0, .5);
+	-webkit-box-shadow : 0 0 5px rgba(0, 0, 0, .5);
+}
+
+/*
+ footer theme
+*/
+.mozilla-universe-widget.footer {
+	position : relative;
+	display : none;
+}

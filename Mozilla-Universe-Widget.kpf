@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project id="76c25ad1-068d-4e20-b1de-0768cd690f7d" kpf_version="4" name="Mozilla-Universe-Widget.kpf">
+<preference-set idref="76c25ad1-068d-4e20-b1de-0768cd690f7d">
+  <boolean id="import_live">1</boolean>
+</preference-set>
+</project>
