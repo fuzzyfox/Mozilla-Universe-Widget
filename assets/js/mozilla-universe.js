@@ -127,7 +127,7 @@
 				maxWidth : 400, //this is the max width the actual may is allowed to be
 				maxHeight : 400, //this is the max height the actual may is allowed to be
 				defaultNode : 'mozilla', //this is the "You are here" option and it highlights the node that is set
-				dataUrl : 'http://www.github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/js/data.json' //this will allow users to set a custom map, allowing the widget to be easily modified for other communities
+				dataUrl : 'http://fuzzyfox.github.com/Mozilla-Universe-Widget/assets/js/data.json' //this will allow users to set a custom map, allowing the widget to be easily modified for other communities
 			}
 		};
 		options.widget = jQuery.extend(defaultOptions.widget, options.widget);
@@ -605,7 +605,7 @@
 			{
 				jQuery.ajax({
 					url: org.mozilla.SiteMap.dataUrl,
-					//jsonpCallback: 'mapData',
+					jsonpCallback: 'mapData',
 					dataType: 'jsonp',
 					success: function(data) {
 						org.mozilla.SiteMap.data =
