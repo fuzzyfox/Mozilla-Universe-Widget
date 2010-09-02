@@ -35,7 +35,9 @@
 				//notify any developers wondering why some of their site just got borked
 				console.log('jQuery has been found but is not known to work with the Mozilla Universe Widget\r\nNow replacing with jQuery 1.4.2');
 				//delete previous instance of jQuery then load jQuery 1.4.2
+				$ = undefined; jQuery = undefined;
 				delete $, jQuery;
+				//get new jQuery
 				mozillaUniverse.getScript('http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js');
 				options.noConflict = false;
 			}
@@ -265,7 +267,7 @@
 		*/
 		mozillaUniverse.map(options.map, function(){
 			var baseLocation = location.href.split('#')[0];
-			location.href = baseLocation + '#' + options.defaultNode;
+			location.href = baseLocation + '#' + options.map.defaultNode;
 		});
 	};
 
