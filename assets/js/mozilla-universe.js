@@ -55,11 +55,11 @@
 				*/
 				if(/MSIE \d+\.\d+/.test(navigator.userAgent))
 				{
-					mozillaUniverse.getScript('http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/js/excanvas.js');
+					mozillaUniverse.getScript('http://fuzzyfox.github.com/Mozilla-Universe-Widget/assets/js/excanvas.js');
 				}
 			
 			//the absolute must haves!
-			mozillaUniverse.getScript('http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/js/jit.min.js');
+			mozillaUniverse.getScript('http://fuzzyfox.github.com/Mozilla-Universe-Widget/assets/js/jit.min.js');
 			
 			//lets setup a check to see if jQuery is ready for use before loading the widget
 			mozillaUniverse.tryReady(0, options);
@@ -127,7 +127,7 @@
 				maxWidth : 400, //this is the max width the actual may is allowed to be
 				maxHeight : 400, //this is the max height the actual may is allowed to be
 				defaultNode : 'mozilla', //this is the "You are here" option and it highlights the node that is set
-				dataUrl : 'http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/js/data.json' //this will allow users to set a custom map, allowing the widget to be easily modified for other communities
+				dataUrl : 'http://fuzzyfox.github.com/Mozilla-Universe-Widget/assets/js/data.json' //this will allow users to set a custom map, allowing the widget to be easily modified for other communities
 			}
 		};
 		options.widget = jQuery.extend(defaultOptions.widget, options.widget);
@@ -137,7 +137,7 @@
 		 Create/load the widget html/css
 		*/
 		//okay, so we have some esensials to cover first. Such as the css for the map needs to be loaded
-		jQuery('head').append('<link rel="stylesheet" href="http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/css/universe.css" type="text/css">');
+		jQuery('head').append('<link rel="stylesheet" href="http://fuzzyfox.github.com/Mozilla-Universe-Widget/assets/css/universe.css" type="text/css">');
 		//and the html container for the widget
 		var $mozillaUniverse_container = jQuery('<div class="mozilla-universe-widget"></div>').addClass(options.widget.theme);
 		//the container for the map [we call this the overlay]
@@ -162,7 +162,7 @@
 				*/
 				
 				//add the toggle tab html to the widget
-				$mozillaUniverse_container.append('<div id="mozilla-universe-toggle"><div id="mozilla-universe-tab"><img src="http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/mozilla-universe-tab.png" alt="mozilla"></div></div>');
+				$mozillaUniverse_container.append('<div id="mozilla-universe-toggle"><div id="mozilla-universe-tab"><img src="http://fuzzyfox.github.com/Mozilla-Universe-Widget/assets/img/mozilla-universe-tab.png" alt="mozilla"></div></div>');
 				
 				//add all this widgety goodness to the page at long last
 				jQuery(options.widget.parent).append($mozillaUniverse_container);
@@ -193,7 +193,7 @@
 				
 				//add all this widgety goodness to the page at long last
 				jQuery(options.widget.parent).prepend($mozillaUniverse_container);
-				jQuery('.mozilla-universe-overlay').append('<img id="mozilla-universe-close" src="http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/mozillaUniverseWidget-close.png" alt="close">');
+				jQuery('.mozilla-universe-overlay').append('<img id="mozilla-universe-close" src="http://fuzzyfox.github.com/Mozilla-Universe-Widget/assets/img/mozillaUniverseWidget-close.png" alt="close">');
 				
 				jQuery('[rel=mozilla-universe]').click(function(){
 					$mozillaUniverse_container.slideToggle('slow');
@@ -228,7 +228,7 @@
 				jQuery(options.widget.parent).append($mozillaUniverse_container);
 				
 				//add a close button to the widget
-				jQuery('.mozilla-universe-overlay').append('<img id="mozilla-universe-close" src="http://github.com/fuzzyfox/Mozilla-Universe-Widget/raw/master/assets/img/mozillaUniverseWidget-close.png" alt="close">');
+				jQuery('.mozilla-universe-overlay').append('<img id="mozilla-universe-close" src="http://fuzzyfox.github.com/Mozilla-Universe-Widget/assets/img/mozillaUniverseWidget-close.png" alt="close">');
 				
 				//add event listeners to triggers and to the close button
 				jQuery('[rel=mozilla-universe]').click(function(){
