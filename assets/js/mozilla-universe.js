@@ -5,9 +5,9 @@
  options, and checks that everything is set for the widget to work.
 */
 	//check that there is a console to log messages to
-	if(!'console' in window)
+	if(typeof console == 'undefined')
 	{
-		window.console = {};
+		var console = {};
 		console.log = console.info = console.error = console.dir = function(){};
 	}
 	
